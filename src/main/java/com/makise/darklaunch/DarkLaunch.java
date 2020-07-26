@@ -9,6 +9,7 @@ package com.makise.darklaunch;
  */
 public class DarkLaunch {
 
+    private DarkRule darkRule;
     /**
      * in seconds
      */
@@ -23,8 +24,12 @@ public class DarkLaunch {
     }
 
     private void loadRule() {
-
+        DarkRuleConfig darkRuleConfig = new DarkRuleConfig();
+        darkRule = new DarkRule(darkRuleConfig);
     }
 
+    public DarkFeature getDarkFeature(String darkFeatureKey) {
+        return darkRule.getDarkFeature(darkFeatureKey);
+    }
 
 }
