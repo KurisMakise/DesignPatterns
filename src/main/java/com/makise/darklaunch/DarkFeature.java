@@ -10,5 +10,6 @@ package com.makise.darklaunch;
 public class DarkFeature {
 
     public DarkFeature(DarkRuleConfig.DarkFeatureConfig darkFeatureConfig) {
+
     }
 }
