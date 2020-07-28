@@ -8,4 +8,7 @@ package com.makise.darklaunch;
  * @date 2020/7/22 23:53
  */
 public class DarkFeature {
+
+    public DarkFeature(DarkRuleConfig.DarkFeatureConfig darkFeatureConfig) {
+    }
 }

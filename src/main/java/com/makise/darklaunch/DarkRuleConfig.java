@@ -1,5 +1,9 @@
 package com.makise.darklaunch;
 
+import lombok.Data;
+
+import java.util.List;
+
 /**
  * 灰度配置
  *
@@ -21,6 +25,20 @@ public class DarkRuleConfig {
      * enabled: true
      * rule: {0-1000}
      */
+    private List<DarkFeatureConfig> darkFeatureConfigs;
 
+    public List<DarkFeatureConfig> getDarkFeatureConfigs() {
+        return darkFeatureConfigs;
+    }
 
+    public void setDarkFeatureConfigs(List<DarkFeatureConfig> darkFeatureConfigs) {
+        this.darkFeatureConfigs = darkFeatureConfigs;
+    }
+
+    @Data
+    public static class DarkFeatureConfig {
+        private String key;
+        private boolean enabled;
+        private String rule;
+    }
 }
