@@ -1,5 +1,9 @@
 package com.makise.darklaunch;
 
+import org.yaml.snakeyaml.Yaml;
+
+import java.io.InputStream;
+
 /**
  * 灰度顶层入口
  *
@@ -20,6 +24,12 @@ public class DarkLaunch {
     }
 
     public DarkLaunch(int ruleUpdateInterval) {
+        InputStream in = this.getClass().getResourceAsStream("dark-rule.yaml");
+        Yaml yaml = new Yaml();
+        yaml.load(in);
+
+        DarkRuleConfig darkRuleConfig ;
+        yaml.
 
     }
 
